@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #f4edea;
+  --secondary-color: #c5d8d1;
+  --tertiary-color: #06bcc1;
+
+  --dark-primary-color: #000000;
+  --dark-secondary-color: #14213d;
+  --dark-tertiary-color: #fca311;
+
+  --font-inter: "Inter";
+  --font-spaceGrotesk: "SpaceGrotesk";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,14 +23,14 @@
   }
 }
 
+html.dark {
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --tertiary-color: var(--dark-tertiary-color);
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif;
 }
 
 @layer utilities {
