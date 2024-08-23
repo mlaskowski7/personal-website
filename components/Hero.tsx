@@ -9,7 +9,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div
-      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center"
+      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mx-2"
       style={{ height: "calc(100vh - 100px)" }}
     >
       <div className="flex flex-col gap-4">
@@ -38,7 +38,7 @@ const Hero = () => {
           Feel free to contact me and take a look on my website
         </p>
       </div>
-      <div className="flex gap-20 justify-center">
+      <div className="flex gap-20 justify-center max-sm:flex-col max-sm:gap-10">
         {socials
           .filter((social: Social) => social.icon != undefined)
           .map((social: Social, index: number) => (
