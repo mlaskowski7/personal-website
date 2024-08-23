@@ -90,19 +90,19 @@ export const technologies: Tech[] = [
 export const navLinks: NavLink[] = [
   {
     title: "ABOUT",
-    link: "#about",
+    link: "about",
   },
   {
     title: "TECHNOLOGIES",
-    link: "#technologies",
+    link: "technologies",
   },
   {
     title: "EXPERIENCE/EDUCATION",
-    link: "#experience",
+    link: "experience",
   },
   {
     title: "PROJECTS",
-    link: "#projects",
+    link: "projects",
   },
 ];
 
