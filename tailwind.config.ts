@@ -10,16 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary-color)",
-        secondary: "var(--secondary-color)",
-        tertiary: "var(--tertiary-color)",
-        "dark-primary": "var(--dark-primary-color)",
-        "dark-secondary": "var(--dark-secondary-color)",
-        "dark-tertiary": "var(--dark-tertiary-color)",
+        primary: "#f4edea",
+        secondary: "#c5d8d1",
+        tertiary: "#06bcc1",
+        "dark-primary": "#000000",
+        "dark-secondary": "#14213d",
+        "dark-tertiary": "#fca311",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
-        spaceGrotesk: ["var(--font-spaceGrotesk"],
+        spaceGrotesk: ["var(--font-spaceGrotesk)"],
+        roboto: ["var(--font-roboto)"],
       },
     },
   },
