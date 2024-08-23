@@ -11,6 +11,7 @@ const Hero = () => {
     <div
       className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mx-2"
       style={{ height: "calc(100vh - 100px)" }}
+      id="about"
     >
       <div className="flex flex-col gap-4">
         <h1 className="text-[40px] tracking-wider">README.md</h1>

@@ -18,6 +18,75 @@ export interface Social {
   icon?: IconProp;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  imagePath: string;
+  repoLink: string;
+  prodLink: string;
+  techUsed: Tech[];
+}
+
+type techCategory = "frontend" | "backend" | "fullstack" | "other-tools" | "db";
+
+export interface Tech {
+  name: string;
+  icon: IconProp | string;
+  category: techCategory;
+  relatedProjects: Project[];
+}
+
+export const technologies: Tech[] = [
+  {
+    name: "C#",
+    icon: "/c#Icon.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: ".NET",
+    icon: "/dotnet.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Java",
+    icon: "/java.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Spring",
+    icon: "/spring.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Rust",
+    icon: "/rust.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "TypeScript",
+    icon: "/ts.png",
+    category: "fullstack" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Next.js",
+    icon: "/next.svg",
+    category: "fullstack" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "React",
+    icon: "/react.png",
+    category: "frontend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+];
+
 export const navLinks: NavLink[] = [
   {
     title: "ABOUT",
