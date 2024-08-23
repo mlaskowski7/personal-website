@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/themeProvider";
+import { ThemeProvider } from "@/context/ThemeProvider";
+import "../lib/fontawesome";
 
 const inter = Inter({
   subsets: ["latin"],

@@ -9,7 +9,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState("");
 
   const handleThemeChange = () => {
@@ -20,9 +20,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     ) {
       setMode("dark");
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       setMode("light");
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   };
 
@@ -37,7 +39,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function useTheme() {
+function useTheme() {
   const context = useContext(ThemeContext);
 
   if (context === undefined) {
@@ -46,3 +48,5 @@ export function useTheme() {
 
   return context;
 }
+
+export { ThemeProvider, useTheme };
