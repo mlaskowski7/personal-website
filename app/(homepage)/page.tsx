@@ -1,6 +1,7 @@
 import ExperienceEducation from "@/containers/ExperienceEducation";
 import Hero from "@/containers/Hero";
 import Navbar from "@/containers/Navbar";
+import Projects from "@/containers/Projects";
 import Technologies from "@/containers/Technologies";
 import React from "react";
 
@@ -11,6 +12,7 @@ const Page = () => {
       <Hero />
       <Technologies />
       <ExperienceEducation />
+      <Projects />
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Technologies = () => {
     >
       <div className="flex flex-col gap-3">
         <h1 className="text-tertiary dark:text-dark-tertiary text-[28px] font-bold tracking-wider font-spaceGrotesk">
-          MY TECH STACK
+          TECH STACK
         </h1>
         <p>
           Currently the most used by me technologies for backend are{" "}
@@ -36,10 +36,13 @@ const Technologies = () => {
         {technologies
           .filter(
             (tech) =>
-              tech.name != "SQL" &&
+              tech.name != "Django" &&
+              tech.name != "JavaScript" &&
+              tech.name != "Node.js" &&
               tech.name != "C++" &&
-              tech.name != "MariaDB" &&
-              tech.name != "Bash"
+              tech.name != "Python" &&
+              tech.name != "Bash" &&
+              tech.category != "db"
           )
           .map((elem: Tech, index: number) => (
             <TechCard key={index} tech={elem} />

@@ -23,7 +23,7 @@ export interface Project {
   description: string;
   imagePath: string;
   repoLink: string;
-  prodLink: string;
+  prodLink?: string;
   techUsed: Tech[];
 }
 
@@ -90,19 +90,55 @@ export const technologies: Tech[] = [
   {
     name: "SQL",
     icon: "/sql.png",
-    category: "backend" as techCategory,
+    category: "db" as techCategory,
     relatedProjects: [] as Project[],
   },
   {
     name: "MariaDB",
     icon: "/mariadb.png",
-    category: "backend" as techCategory,
+    category: "db" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "MongoDB",
+    icon: "/mongodb.png",
+    category: "db" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "PostgreSQL",
+    icon: "/postgres.png",
+    category: "db" as techCategory,
     relatedProjects: [] as Project[],
   },
   {
     name: "TypeScript",
     icon: "/ts.png",
     category: "fullstack" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "JavaScript",
+    icon: "/javascript.png",
+    category: "fullstack" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Node.js",
+    icon: "/express.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Python",
+    icon: "/python.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Django",
+    icon: "/django.png",
+    category: "backend" as techCategory,
     relatedProjects: [] as Project[],
   },
   {
@@ -116,6 +152,92 @@ export const technologies: Tech[] = [
     icon: "/react.png",
     category: "frontend" as techCategory,
     relatedProjects: [] as Project[],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    title: "Betting Service",
+    description:
+      "A Node.js and Express-powered betting platform with a React TypeScript frontend and PostgreSQL database. Supports user authentication, bet management, and features comprehensive leaderboards.",
+    imagePath: "/betting.png",
+    repoLink: "https://github.com/mlaskowski7/bettingService",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "TypeScript" ||
+        tech.name === "React" ||
+        tech.name === "Node.js" ||
+        tech.name === "PostgreSQL"
+    ),
+  },
+  {
+    title: "StackOverflow Clone",
+    description:
+      "A Stack Overflow clone using Next.js, TypeScript, and Tailwind CSS. Used next js server actions for backend, mongodb as database and clerk for authorizarion",
+    imagePath: "/stackoverflowClone.png",
+    repoLink: "https://github.com/mlaskowski7/stackoverflowClone",
+    prodLink: "https://stackoverflow-clone-gold.vercel.app/",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "TypeScript" ||
+        tech.name === "Next.js" ||
+        tech.name === "MongoDB"
+    ),
+  },
+  {
+    title: "Quiz",
+    description:
+      "This is a fullstack quiz application with backend developed in Java Spring Framework, frontend using Vite with React.js, and Tailwind CSS for styling. The database is powered by PostgreSQL. API endpoints were tested using Postman. App has quiz creation and quiz checking functionalities.",
+    imagePath: "/quiz.png",
+    repoLink: "https://github.com/mlaskowski7/quiz",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Java" ||
+        tech.name === "Spring" ||
+        tech.name === "PostgreSQL" ||
+        tech.name === "JavaScript" ||
+        tech.name === "React"
+    ),
+  },
+  {
+    title: "Chat App",
+    description:
+      "This is a real-time chat application built using Rust with Actix Web for the backend and Next.js with TypeScript for the frontend. The app supports WebSocket connections for real-time messaging.",
+    imagePath: "/chat-app.png",
+    repoLink: "https://github.com/mlaskowski7/chat-app",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Rust" ||
+        tech.name === "TypeScript" ||
+        tech.name === "Next.js"
+    ),
+  },
+  {
+    title: "Friends",
+    description:
+      "Friends is my fullstack social media web app, with user authorization, feed, like and comment functionalities.",
+    imagePath: "/friends.png",
+    repoLink: "https://github.com/mlaskowski7/friends",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Python" ||
+        tech.name === "Django" ||
+        tech.name === "JavaScript"
+    ),
+  },
+  {
+    title: "Pacman Clone",
+    description: "Pacman clone window app created in Java with awt, swing",
+    imagePath: "/pacman.png",
+    repoLink: "https://github.com/mlaskowski7/friends",
+    techUsed: technologies.filter((tech) => tech.name === "Java"),
+  },
+  {
+    title: "2D Game",
+    description: "2D Game created in c++ using SFML library",
+    imagePath: "/2dgame.png",
+    repoLink: "https://github.com/mlaskowski7/2dGame",
+    techUsed: technologies.filter((tech) => tech.name === "C++"),
   },
 ];
 
