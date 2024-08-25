@@ -1,3 +1,4 @@
+import ExperienceEducation from "@/containers/ExperienceEducation";
 import Hero from "@/containers/Hero";
 import Navbar from "@/containers/Navbar";
 import Technologies from "@/containers/Technologies";
@@ -9,6 +10,7 @@ const Page = () => {
       <Navbar />
       <Hero />
       <Technologies />
+      <ExperienceEducation />
     </div>
   );
 };

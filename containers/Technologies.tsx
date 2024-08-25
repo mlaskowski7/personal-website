@@ -33,9 +33,17 @@ const Technologies = () => {
         </p>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        {technologies.map((elem: Tech, index: number) => (
-          <TechCard key={index} tech={elem} />
-        ))}
+        {technologies
+          .filter(
+            (tech) =>
+              tech.name != "SQL" &&
+              tech.name != "C++" &&
+              tech.name != "MariaDB" &&
+              tech.name != "Bash"
+          )
+          .map((elem: Tech, index: number) => (
+            <TechCard key={index} tech={elem} />
+          ))}
       </div>
     </div>
   );

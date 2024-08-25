@@ -22,7 +22,7 @@ const Popover = ({ onClose, content }: Props) => {
       <div className="relative bg-secondary dark:bg-dark-secondary p-6 rounded-lg shadow-lg z-50 max-w-lg w-full">
         {/* Close button positioned at the top-right */}
         <button
-          className="fixed top-8 right-8 bg-tertiary dark:bg-dark-tertiary px-3 py-2 rounded-full text-[18px] hover:bg-primary dark:hover:bg-dark-primary ease-in-out duration-300"
+          className="fixed top-7 right-9 bg-tertiary dark:bg-dark-tertiary px-3 py-2 rounded-full text-[18px] hover:bg-primary dark:hover:bg-dark-primary ease-in-out duration-300"
           onClick={onClose}
         >
           <FontAwesomeIcon icon={faClose} />

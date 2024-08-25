@@ -36,6 +36,14 @@ export interface Tech {
   relatedProjects: Project[];
 }
 
+export interface Experience {
+  title: string;
+  company_name: string;
+  icon: string;
+  date: string;
+  techRelated: Tech[];
+}
+
 export const technologies: Tech[] = [
   {
     name: "C#",
@@ -68,6 +76,30 @@ export const technologies: Tech[] = [
     relatedProjects: [] as Project[],
   },
   {
+    name: "C++",
+    icon: "/cpp.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "Bash",
+    icon: "/bash.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "SQL",
+    icon: "/sql.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "MariaDB",
+    icon: "/mariadb.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
     name: "TypeScript",
     icon: "/ts.png",
     category: "fullstack" as techCategory,
@@ -84,6 +116,51 @@ export const technologies: Tech[] = [
     icon: "/react.png",
     category: "frontend" as techCategory,
     relatedProjects: [] as Project[],
+  },
+];
+
+export const experienceData: Experience[] = [
+  {
+    title: "CAE Advanced English Certificate",
+    company_name: "Cambridge",
+    icon: "/cambridge.png",
+    date: "18th June 2022",
+    techRelated: [],
+  },
+  {
+    title: "Bachelor's of Engineering in Computer Science",
+    company_name: "Polish-Japanese Academy of Information Technology",
+    icon: "/pjatk.png",
+    date: "October 2023 - Present",
+    techRelated: technologies.filter(
+      (tech) =>
+        tech.name === "Java" ||
+        tech.name === "C++" ||
+        tech.name === "Bash" ||
+        tech.name === "SQL"
+    ),
+  },
+  {
+    title: "Junior Software Developer",
+    company_name: "Atinea",
+    icon: "/atinea.png",
+    date: "February 2024 - Present",
+    techRelated: technologies.filter(
+      (tech) =>
+        tech.name === "C#" ||
+        tech.name === ".NET" ||
+        tech.name === "Typescript" ||
+        tech.name === "React"
+    ),
+  },
+  {
+    title: ".NET Online Program",
+    company_name: "Epam Systems",
+    icon: "/epam.png",
+    date: "June 2024 - Present",
+    techRelated: technologies.filter(
+      (tech) => tech.name === "C#" || tech.name === ".NET"
+    ),
   },
 ];
 
