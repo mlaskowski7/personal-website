@@ -105,7 +105,7 @@ const ProjectCard = ({ img, link, title, tech, index }: Props) => {
           href={link}
           className="text-white text-xs text-center transition-all duration-300 ease hover:underline underline-offset-2"
         >
-          Click to view
+          Click to view the repository
         </Link>
       </div>
     </motion.div>

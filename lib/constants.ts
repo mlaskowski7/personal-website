@@ -242,13 +242,13 @@ export const projects: Project[] = [
 ];
 
 export const experienceData: Experience[] = [
-  {
-    title: "CAE Advanced English Certificate",
-    company_name: "Cambridge",
-    icon: "/cambridge.png",
-    date: "18th June 2022",
-    techRelated: [],
-  },
+  // {
+  //   title: "CAE Advanced English Certificate",
+  //   company_name: "Cambridge",
+  //   icon: "/cambridge.png",
+  //   date: "18th June 2022",
+  //   techRelated: [],
+  // },
   {
     title: "Bachelor's of Engineering in Computer Science",
     company_name: "Polish-Japanese Academy of Information Technology",
@@ -271,9 +271,16 @@ export const experienceData: Experience[] = [
       (tech) =>
         tech.name === "C#" ||
         tech.name === ".NET" ||
-        tech.name === "Typescript" ||
+        tech.name === "TypeScript" ||
         tech.name === "React"
     ),
+  },
+  {
+    title: "Member of RustLab Students Club",
+    company_name: "Polish-Japanese Academy of Information Technology",
+    icon: "/rust.png",
+    date: "April 2024 - Present",
+    techRelated: technologies.filter((tech) => tech.name === "Rust"),
   },
   {
     title: ".NET Online Program",

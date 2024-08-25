@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Popover from "../Popover";
 import { motion, Variants } from "framer-motion";
+import TechDetailsCard from "./TechDetailsCard";
 
 interface Props {
   tech: Tech;
@@ -56,7 +57,7 @@ const TechCard = ({ tech }: Props) => {
       {showingPopover && (
         <Popover
           onClose={closePopover}
-          content={<div>More details about {tech.name}</div>}
+          content={<TechDetailsCard tech={tech} onScrollLink={closePopover} />}
         />
       )}
     </motion.div>
