@@ -17,6 +17,7 @@ const ProjectCard = ({ img, link, title, tech }: Props) => {
   const imageRef = useRef(null);
 
   const handleImageLoad = () => {
+    // @ts-ignore
     const { naturalWidth, naturalHeight } = imageRef.current;
     const scaleRatio = naturalWidth / naturalHeight;
 

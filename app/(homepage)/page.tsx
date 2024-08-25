@@ -1,3 +1,4 @@
+import ProgressBar from "@/components/ProgressBar";
 import ExperienceEducation from "@/containers/ExperienceEducation";
 import Hero from "@/containers/Hero";
 import Navbar from "@/containers/Navbar";
@@ -13,6 +14,7 @@ const Page = () => {
       <Technologies />
       <ExperienceEducation />
       <Projects />
+      <ProgressBar />
     </div>
   );
 };
