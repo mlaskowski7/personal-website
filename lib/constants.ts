@@ -239,6 +239,40 @@ export const projects: Project[] = [
     repoLink: "https://github.com/mlaskowski7/2dGame",
     techUsed: technologies.filter((tech) => tech.name === "C++"),
   },
+  {
+    title: "Wget Clone",
+    description: "2D Game created in c++ using SFML library",
+    imagePath: "/2dgame.png",
+    repoLink: "https://github.com/mlaskowski7/wget_clone",
+    techUsed: technologies.filter((tech) => tech.name === "Rust"),
+  },
+  {
+    title: "Auth Server",
+    description: "2D Game created in c++ using SFML library",
+    imagePath: "/2dgame.png",
+    repoLink: "https://github.com/mlaskowski7/rustAuthServer",
+    techUsed: technologies.filter((tech) => tech.name === "Rust"),
+  },
+  {
+    title: "Employee Manager",
+    description: "2D Game created in c++ using SFML library",
+    imagePath: "/2dgame.png",
+    repoLink: "https://github.com/mlaskowski7/employeeManager",
+    techUsed: technologies.filter(
+      (tech) => tech.name === "C#" || tech.name === ".NET"
+    ),
+  },
+  {
+    title: "Movies",
+    description:
+      "FullStack movies web app, front end side made with react js, back end made in java spring and database is held on MongoDB",
+    imagePath: "/2dgame.png",
+    repoLink: "https://github.com/mlaskowski7/movies",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Java" || tech.name === "Spring" || tech.name === "React"
+    ),
+  },
 ];
 
 export const experienceData: Experience[] = [
