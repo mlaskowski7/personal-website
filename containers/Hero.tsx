@@ -3,6 +3,7 @@ import { Social, socials } from "@/lib/constants";
 import { faMehBlank } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import AppearingText from "@/components/AppearingText";
 import Link from "next/link";
 import React from "react";
 
@@ -17,23 +18,17 @@ const Hero = () => {
         <h1 className="text-[40px] tracking-wider">README.md</h1>
         <p>
           Hi, my name is Mateusz and I am a{" "}
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="font-bold text-tertiary dark:text-dark-tertiary"
-          >
-            Junior Software Developer
-          </motion.span>{" "}
+          <AppearingText
+            text="Junior Software Developer"
+            delay={1}
+            duration={0.5}
+          />{" "}
           and a{" "}
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="font-bold text-tertiary dark:text-dark-tertiary"
-          >
-            Computer Science Student
-          </motion.span>
+          <AppearingText
+            text="Computer Science Student"
+            delay={1.5}
+            duration={0.5}
+          />
           <br />
           Located in Warsaw, Poland <br />
           Feel free to contact me and take a look on my website

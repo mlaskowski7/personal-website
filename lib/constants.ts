@@ -39,7 +39,7 @@ export interface Tech {
 export const technologies: Tech[] = [
   {
     name: "C#",
-    icon: "/c#Icon.png",
+    icon: "/csharp2.png",
     category: "backend" as techCategory,
     relatedProjects: [] as Project[],
   },

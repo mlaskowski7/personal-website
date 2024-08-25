@@ -1,18 +1,65 @@
+"use client";
+
 import { Tech } from "@/lib/constants";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Popover from "../Popover";
+import { motion, Variants } from "framer-motion";
 
 interface Props {
   tech: Tech;
 }
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 200,
+  },
+  onscreen: {
+    y: 50,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 const TechCard = ({ tech }: Props) => {
+  const [showingPopover, setShowingPopover] = useState(false);
+
+  const openPopover = () => {
+    setShowingPopover(true);
+  };
+  const closePopover = () => {
+    setShowingPopover(false);
+  };
   return (
-    <div className="flex flex-col justify-center items-center p-10 bg-secondary dark:bg-dark-secondary">
-      <Image src={tech.icon as string} alt="techIcon" width={80} height={80} />
-    </div>
+    <motion.div
+      variants={cardVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      className="flex flex-col justify-center items-center p-8 gap-2 bg-secondary dark:bg-dark-secondary"
+    >
+      <Image src={tech.icon as string} alt="techIcon" width={70} height={70} />
+      <button
+        onClick={openPopover}
+        className="text-tertiary dark:text-dark-tertiary p-1 rounded-full text-[14px]"
+      >
+        <FontAwesomeIcon icon={faArrowRight} />
+      </button>
+
+      {showingPopover && (
+        <Popover
+          onClose={closePopover}
+          content={<div>More details about {tech.name}</div>}
+        />
+      )}
+    </motion.div>
   );
 };
 

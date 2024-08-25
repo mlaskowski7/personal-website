@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import React, { useEffect, useState } from "react";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 const Navbar = () => {
   return (

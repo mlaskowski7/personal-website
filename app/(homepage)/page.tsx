@@ -1,6 +1,6 @@
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Technologies from "@/components/Technologies";
+import Hero from "@/containers/Hero";
+import Navbar from "@/containers/Navbar";
+import Technologies from "@/containers/Technologies";
 import React from "react";
 
 const Page = () => {
