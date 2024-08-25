@@ -45,10 +45,11 @@ const Hero = () => {
                 rotate: [0, 0, 270, 270, 0],
                 borderRadius: ["20%", "20%", "50%", "50%", "20%"],
               }}
+              whileTap={{ scale: 0.85 }}
             >
               <Link
                 href={social.link}
-                className="bg-secondary dark:bg-dark-secondary hover:bg-primary dark:hover:bg-dark-primary hover:text-tertiary dark:hover:text-dark-tertiary ease-in-out duration-300 text-[30px] rounded-full p-3"
+                className="bg-secondary dark:bg-dark-secondary hover:text-tertiary dark:hover:text-dark-tertiary ease-in-out duration-300 text-[30px] rounded-full p-3"
               >
                 {social.icon && <FontAwesomeIcon icon={social.icon} />}
               </Link>

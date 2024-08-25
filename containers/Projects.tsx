@@ -18,6 +18,7 @@ const Projects = () => {
             link={project.repoLink}
             title={project.title}
             tech={project.techUsed}
+            index={index}
           />
         ))}
       </div>

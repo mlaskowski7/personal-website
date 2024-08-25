@@ -3,15 +3,17 @@ import { Tech } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   img: string;
   link: string;
   title: string;
   tech: Tech[];
+  index: number;
 }
 
-const ProjectCard = ({ img, link, title, tech }: Props) => {
+const ProjectCard = ({ img, link, title, tech, index }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [size, setSize] = useState({ width: "auto", height: "auto" });
   const imageRef = useRef(null);
@@ -51,7 +53,19 @@ const ProjectCard = ({ img, link, title, tech }: Props) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: index % 2 === 0 ? 50 : -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
       style={{
         width: size.width,
         height: size.height,
@@ -94,7 +108,7 @@ const ProjectCard = ({ img, link, title, tech }: Props) => {
           Click to view
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
