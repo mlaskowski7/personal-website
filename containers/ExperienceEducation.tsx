@@ -72,7 +72,7 @@ const ExperienceCard = ({ experience }: PropsCard) => {
 const ExperienceEducation = () => {
   return (
     <div>
-      <div className="mt-20 flex flex-col">
+      <div className="mt-20 flex flex-col" id="experience">
         <VerticalTimeline>
           {experienceData.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
