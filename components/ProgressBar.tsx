@@ -11,7 +11,7 @@ const ProgressBar = () => {
   });
   return (
     <motion.div
-      className="w-full fixed bottom-0 left-0 right-0 h-[10px] bg-tertiary dark:bg-dark-tertiary origin-0"
+      className="w-full fixed bottom-0 left-0 right-0 h-[10px] bg-tertiary dark:bg-dark-tertiary origin-0 max-sm:w-[100vw]"
       style={{ scaleX }}
     ></motion.div>
   );

@@ -80,7 +80,7 @@ const ProjectCard = ({ img, link, title, tech, index }: Props) => {
         src={img}
         alt={title}
         onLoad={handleImageLoad}
-        className={`w-auto h-auto ${
+        className={`w-auto h-auto max-sm:w-[80vw] ${
           isLoading ? "display-none" : "display-block"
         }`}
       />

@@ -9,7 +9,7 @@ import ThemeSwitch from "../components/ThemeSwitch";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between max-md:justify-center max-md:items-center fixed top-0 z-50 bg-primary dark:bg-dark-primary w-full gap-5 p-6 shadow-sm dark:shadow-none sm:px-12 max-md:flex-col">
+    <nav className="flex justify-between max-md:justify-center max-md:items-center fixed top-0 z-50 bg-primary dark:bg-dark-primary w-full gap-5 p-6 shadow-sm dark:shadow-none sm:px-12 max-md:flex-col max-sm:w-[100vw]">
       <div className="flex gap-10">
         <Link href="/" className="flex items-center gap-3 max-md:hidden">
           <Image src="/logo.png" alt="rustacean" width={40} height={40} />
