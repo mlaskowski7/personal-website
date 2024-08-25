@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 max-md:hidden">
           <Image src="/logo.png" alt="rustacean" width={40} height={40} />
           <p className="font-bold font-roboto ">
-            M
+            m
             <span className="text-tertiary dark:text-dark-tertiary">
               LASKOWSKI7
             </span>

@@ -48,7 +48,7 @@ const Hero = () => {
             >
               <Link
                 href={social.link}
-                className="bg-secondary dark:bg-dark-secondary hover:bg-primary dark:hover:bg-dark-primary ease-in-out duration-300 text-[30px] rounded-full p-3"
+                className="bg-secondary dark:bg-dark-secondary hover:bg-primary dark:hover:bg-dark-primary hover:text-tertiary dark:hover:text-dark-tertiary ease-in-out duration-300 text-[30px] rounded-full p-3"
               >
                 {social.icon && <FontAwesomeIcon icon={social.icon} />}
               </Link>

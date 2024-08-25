@@ -1,4 +1,5 @@
 "use client";
+import { Tech } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
@@ -7,9 +8,10 @@ interface Props {
   img: string;
   link: string;
   title: string;
+  tech: Tech[];
 }
 
-const ProjectCard = ({ img, link, title }: Props) => {
+const ProjectCard = ({ img, link, title, tech }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [size, setSize] = useState({ width: "auto", height: "auto" });
   const imageRef = useRef(null);
@@ -58,8 +60,8 @@ const ProjectCard = ({ img, link, title }: Props) => {
       {isLoading && <div>Loading ...</div>}
       <Image
         ref={imageRef}
-        width={40}
-        height={40}
+        width={400}
+        height={400}
         src={img}
         alt={title}
         onLoad={handleImageLoad}
@@ -67,10 +69,25 @@ const ProjectCard = ({ img, link, title }: Props) => {
           isLoading ? "display-none" : "display-block"
         }`}
       />
-      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-full h-full">
+      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-full h-full gap-2">
         <h1 className="text-white font-bold text-xl text-center">{title}</h1>
+
+        <div className="flex gap-1 justify-center items-center">
+          {tech.map((item, index) => (
+            <div
+              className={` font-spaceGrotesk text-[12px] px-1 rounded-md  ${
+                index % 2 == 0
+                  ? "bg-secondary dark:bg-dark-secondary"
+                  : "bg-tertiary dark:bg-dark-tertiary"
+              }`}
+              key={index}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
         <Link
-          href={`/${link}`}
+          href={link}
           className="text-white text-xs text-center transition-all duration-300 ease hover:underline underline-offset-2"
         >
           Click to view
