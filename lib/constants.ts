@@ -317,7 +317,7 @@ export const experienceData: Experience[] = [
     techRelated: technologies.filter((tech) => tech.name === "Rust"),
   },
   {
-    title: ".NET Online Program",
+    title: ".NET Trainee",
     company_name: "Epam Systems",
     icon: "/epam.png",
     date: "June 2024 - Present",
