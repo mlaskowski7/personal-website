@@ -84,7 +84,7 @@ const ProjectCard = ({ img, link, title, tech, index }: Props) => {
           isLoading ? "display-none" : "display-block"
         }`}
       />
-      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-[80vw] h-full gap-2">
+      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-full max-sm:w-[80vw] h-full gap-2">
         <h1 className="text-white font-bold text-xl text-center">{title}</h1>
 
         <div className="flex gap-1 justify-center items-center">

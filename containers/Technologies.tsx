@@ -43,7 +43,7 @@ const Technologies = () => {
               tech.name != "Python" &&
               tech.name != "Bash" &&
               tech.category != "db" &&
-              tech.name != "Svelte" &&
+              tech.name != "SvelteKit" &&
               tech.name != "Actix-web"
           )
           .map((elem: Tech, index: number) => (
