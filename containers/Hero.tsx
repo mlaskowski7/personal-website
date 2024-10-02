@@ -10,7 +10,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div
-      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mt-[50px] max-sm:text-center"
+      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mt-[80px] max-sm:text-center"
       style={{ height: "calc(100vh - 100px)" }}
       id="about"
     >
