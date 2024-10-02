@@ -42,7 +42,9 @@ const Technologies = () => {
               tech.name != "C++" &&
               tech.name != "Python" &&
               tech.name != "Bash" &&
-              tech.category != "db"
+              tech.category != "db" &&
+              tech.name != "Svelte" &&
+              tech.name != "Actix-web"
           )
           .map((elem: Tech, index: number) => (
             <TechCard key={index} tech={elem} />

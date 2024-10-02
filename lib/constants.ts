@@ -153,9 +153,42 @@ export const technologies: Tech[] = [
     category: "frontend" as techCategory,
     relatedProjects: [] as Project[],
   },
+  {
+    name: "Actix-web",
+    icon: "/react.png",
+    category: "backend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "SvelteKit",
+    icon: "/svelte.png",
+    category: "frontend" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "MySQL",
+    icon: "/mySQL-logo.png",
+    category: "db" as techCategory,
+    relatedProjects: [] as Project[],
+  },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Titans Game",
+    description:
+      "Real time web game project, based on websockets. Supports multiple comprehensive game menu with friends, lobbies functionalities. Advanced user authentication system based on jwt tokens.",
+    imagePath: "/titansGame.png",
+    repoLink: "https://github.com/mlaskowski7/titansGame",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Rust" ||
+        tech.name === "Actix-web" ||
+        tech.name === "MySQL" ||
+        tech.name === "TypeScript" ||
+        tech.name === "SvelteKit"
+    ),
+  },
   {
     title: "Betting Service",
     description:
@@ -200,19 +233,6 @@ export const projects: Project[] = [
     ),
   },
   {
-    title: "Chat App",
-    description:
-      "This is a real-time chat application built using Rust with Actix Web for the backend and Next.js with TypeScript for the frontend. The app supports WebSocket connections for real-time messaging.",
-    imagePath: "/chat-app.png",
-    repoLink: "https://github.com/mlaskowski7/chat-app",
-    techUsed: technologies.filter(
-      (tech) =>
-        tech.name === "Rust" ||
-        tech.name === "TypeScript" ||
-        tech.name === "Next.js"
-    ),
-  },
-  {
     title: "Friends",
     description:
       "Friends is my fullstack social media web app, with user authorization, feed, like and comment functionalities.",
@@ -238,6 +258,19 @@ export const projects: Project[] = [
     imagePath: "/2dgame.png",
     repoLink: "https://github.com/mlaskowski7/2dGame",
     techUsed: technologies.filter((tech) => tech.name === "C++"),
+  },
+  {
+    title: "Chat App",
+    description:
+      "This is a real-time chat application built using Rust with Actix Web for the backend and Next.js with TypeScript for the frontend. The app supports WebSocket connections for real-time messaging.",
+    imagePath: "/chat-app.png",
+    repoLink: "https://github.com/mlaskowski7/chat-app",
+    techUsed: technologies.filter(
+      (tech) =>
+        tech.name === "Rust" ||
+        tech.name === "TypeScript" ||
+        tech.name === "Next.js"
+    ),
   },
   {
     title: "Wget Clone",
@@ -276,13 +309,6 @@ export const projects: Project[] = [
 ];
 
 export const experienceData: Experience[] = [
-  // {
-  //   title: "CAE Advanced English Certificate",
-  //   company_name: "Cambridge",
-  //   icon: "/cambridge.png",
-  //   date: "18th June 2022",
-  //   techRelated: [],
-  // },
   {
     title: "Bachelor's of Engineering in Computer Science",
     company_name: "Polish-Japanese Academy of Information Technology",
