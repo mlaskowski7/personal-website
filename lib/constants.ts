@@ -386,15 +386,15 @@ export const socials: Social[] = [
     icon: faLinkedin,
   },
   {
-    name: "Discord",
-    link: "https://discord.gg/YyaGb22Q",
-    username: "las_novv",
-    icon: faDiscord,
-  },
-  {
     name: "Mail",
     link: "mailto:mtlaskowski7@gmail.com",
     username: "mtlaskowski7@gmail.com",
     icon: faEnvelope,
+  },
+  {
+    name: "Discord",
+    link: "https://discord.gg/YyaGb22Q",
+    username: "las_novv",
+    icon: faDiscord,
   },
 ];

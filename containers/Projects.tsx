@@ -10,7 +10,7 @@ const Projects = () => {
       id="projects"
       className={`min-h-screen relative flex md:flex-row flex-col-reverse gap-10 max-md:gap-4 justify-center items-center py-10`}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-2 gap-4 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-2 gap-4 items-center max-sm:max-w-[80vw]">
         {projects.slice(0, 6).map((project: Project, index: number) => (
           <ProjectCard
             key={index}

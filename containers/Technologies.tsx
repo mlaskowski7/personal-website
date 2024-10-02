@@ -8,14 +8,14 @@ const Technologies = () => {
   return (
     <div
       id="technologies"
-      className=" w-full flex max-sm:flex-col gap-20 justify-center items-center max-sm:mx-2"
+      className=" w-full flex max-sm:flex-col gap-20 justify-center items-center max-sm:text-center"
       style={{ height: "calc(100vh - 100px)" }}
     >
       <div className="flex flex-col gap-3">
         <h1 className="text-tertiary dark:text-dark-tertiary text-[28px] font-bold tracking-wider font-spaceGrotesk">
           TECH STACK
         </h1>
-        <p>
+        <p className="max-sm:text-[14px] max-sm:w-[80vw]">
           Currently the most used by me technologies for backend are{" "}
           <AppearingText text="C#" delay={1} /> with{" "}
           <AppearingText text=".NET" delay={1.25} /> framework and{" "}

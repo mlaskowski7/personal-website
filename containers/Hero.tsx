@@ -10,13 +10,13 @@ import React from "react";
 const Hero = () => {
   return (
     <div
-      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mt-0 max-sm:text-center"
+      className="mt-[100px] w-full flex flex-col gap-10 justify-center items-center max-sm:mt-0 max-sm:text-center "
       style={{ height: "calc(100vh - 100px)" }}
       id="about"
     >
       <div className="flex flex-col gap-4">
         <h1 className="text-[40px] tracking-wider">README.md</h1>
-        <p className="max-sm:text-[14px]">
+        <p className="max-sm:text-[14px] max-sm:w-[80vw]">
           Hi, my name is Mateusz and I am a{" "}
           <AppearingText
             text="Junior Software Developer"
