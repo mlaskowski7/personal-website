@@ -249,7 +249,7 @@ export const projects: Project[] = [
     title: "Pacman Clone",
     description: "Pacman clone window app created in Java with awt, swing",
     imagePath: "/pacman.png",
-    repoLink: "https://github.com/mlaskowski7/friends",
+    repoLink: "https://github.com/mlaskowski7/pacmanGame",
     techUsed: technologies.filter((tech) => tech.name === "Java"),
   },
   {
