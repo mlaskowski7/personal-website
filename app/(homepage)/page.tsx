@@ -8,7 +8,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="bg-primary dark:bg-dark-primary text-black dark:text-white min-h-screen text-base font-inter flex flex-col max-sm:gap-40">
+    <div className="bg-primary dark:bg-dark-primary text-black dark:text-white min-h-screen text-base font-inter flex flex-col max-sm:gap-[300px]">
       <Navbar />
       <Hero />
       <Technologies />
