@@ -183,7 +183,7 @@ export const projects: Project[] = [
     techUsed: technologies.filter(
       (tech) =>
         tech.name === "Rust" ||
-        tech.name === "Actix-web" ||
+        tech.name === "Actix" ||
         tech.name === "MySQL" ||
         tech.name === "TypeScript" ||
         tech.name === "SvelteKit"
