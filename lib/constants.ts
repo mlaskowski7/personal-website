@@ -154,7 +154,7 @@ export const technologies: Tech[] = [
     relatedProjects: [] as Project[],
   },
   {
-    name: "Actix-web",
+    name: "Actix",
     icon: "/react.png",
     category: "backend" as techCategory,
     relatedProjects: [] as Project[],
