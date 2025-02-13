@@ -326,7 +326,7 @@ export const experienceData: Experience[] = [
     title: "Junior Software Developer",
     company_name: "Atinea",
     icon: "/atinea.png",
-    date: "February 2024 - Present",
+    date: "February 2024 - November 2024",
     techRelated: technologies.filter(
       (tech) =>
         tech.name === "C#" ||
