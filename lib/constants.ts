@@ -351,6 +351,19 @@ export const experienceData: Experience[] = [
       (tech) => tech.name === "C#" || tech.name === ".NET"
     ),
   },
+  {
+    title: "Software Engineer Intern",
+    company_name: "Grid Dynamics",
+    icon: "/gridDynamics.png",
+    date: "November 2024 - Present",
+    techRelated: technologies.filter(
+      (tech) =>
+        tech.name === "Java" ||
+        tech.name === "Spring" ||
+        tech.name === "SQL" ||
+        tech.name === "PostgreSQL"
+    ),
+  },
 ];
 
 export const navLinks: NavLink[] = [
