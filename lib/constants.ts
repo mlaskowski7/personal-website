@@ -27,7 +27,13 @@ export interface Project {
   techUsed: Tech[];
 }
 
-type techCategory = "frontend" | "backend" | "fullstack" | "other-tools" | "db";
+type techCategory =
+  | "frontend"
+  | "backend"
+  | "fullstack"
+  | "other-tools"
+  | "db"
+  | "cloud";
 
 export interface Tech {
   name: string;
@@ -171,6 +177,18 @@ export const technologies: Tech[] = [
     category: "db" as techCategory,
     relatedProjects: [] as Project[],
   },
+  {
+    name: "GCP",
+    icon: "/gcp.png",
+    category: "cloud" as techCategory,
+    relatedProjects: [] as Project[],
+  },
+  {
+    name: "AWS",
+    icon: "/aws.png",
+    category: "cloud" as techCategory,
+    relatedProjects: [] as Project[],
+  },
 ];
 
 export const projects: Project[] = [
@@ -186,7 +204,7 @@ export const projects: Project[] = [
         tech.name === "Actix" ||
         tech.name === "MySQL" ||
         tech.name === "TypeScript" ||
-        tech.name === "SvelteKit"
+        tech.name === "SvelteKit",
     ),
   },
   {
@@ -200,7 +218,7 @@ export const projects: Project[] = [
         tech.name === "TypeScript" ||
         tech.name === "React" ||
         tech.name === "Node.js" ||
-        tech.name === "PostgreSQL"
+        tech.name === "PostgreSQL",
     ),
   },
   {
@@ -214,7 +232,7 @@ export const projects: Project[] = [
       (tech) =>
         tech.name === "TypeScript" ||
         tech.name === "Next.js" ||
-        tech.name === "MongoDB"
+        tech.name === "MongoDB",
     ),
   },
   {
@@ -229,7 +247,7 @@ export const projects: Project[] = [
         tech.name === "Spring" ||
         tech.name === "PostgreSQL" ||
         tech.name === "JavaScript" ||
-        tech.name === "React"
+        tech.name === "React",
     ),
   },
   {
@@ -242,7 +260,7 @@ export const projects: Project[] = [
       (tech) =>
         tech.name === "Python" ||
         tech.name === "Django" ||
-        tech.name === "JavaScript"
+        tech.name === "JavaScript",
     ),
   },
   {
@@ -269,7 +287,7 @@ export const projects: Project[] = [
       (tech) =>
         tech.name === "Rust" ||
         tech.name === "TypeScript" ||
-        tech.name === "Next.js"
+        tech.name === "Next.js",
     ),
   },
   {
@@ -292,7 +310,7 @@ export const projects: Project[] = [
     imagePath: "/2dgame.png",
     repoLink: "https://github.com/mlaskowski7/employeeManager",
     techUsed: technologies.filter(
-      (tech) => tech.name === "C#" || tech.name === ".NET"
+      (tech) => tech.name === "C#" || tech.name === ".NET",
     ),
   },
   {
@@ -303,7 +321,7 @@ export const projects: Project[] = [
     repoLink: "https://github.com/mlaskowski7/movies",
     techUsed: technologies.filter(
       (tech) =>
-        tech.name === "Java" || tech.name === "Spring" || tech.name === "React"
+        tech.name === "Java" || tech.name === "Spring" || tech.name === "React",
     ),
   },
 ];
@@ -319,7 +337,7 @@ export const experienceData: Experience[] = [
         tech.name === "Java" ||
         tech.name === "C++" ||
         tech.name === "Bash" ||
-        tech.name === "SQL"
+        tech.name === "SQL",
     ),
   },
   {
@@ -332,36 +350,40 @@ export const experienceData: Experience[] = [
         tech.name === "C#" ||
         tech.name === ".NET" ||
         tech.name === "TypeScript" ||
-        tech.name === "React"
+        tech.name === "React",
     ),
-  },
-  {
-    title: "Member of RustLab Students Club",
-    company_name: "Polish-Japanese Academy of Information Technology",
-    icon: "/rust.png",
-    date: "April 2024 - Present",
-    techRelated: technologies.filter((tech) => tech.name === "Rust"),
   },
   {
     title: ".NET Training",
     company_name: "Epam Systems",
     icon: "/epam.png",
-    date: "June 2024 - Present",
+    date: "June 2024 - June 2025",
     techRelated: technologies.filter(
-      (tech) => tech.name === "C#" || tech.name === ".NET"
+      (tech) => tech.name === "C#" || tech.name === ".NET",
     ),
   },
   {
     title: "Software Engineer Intern",
     company_name: "Grid Dynamics",
     icon: "/gridDynamics.png",
-    date: "November 2024 - Present",
+    date: "November 2024 - May 2025",
     techRelated: technologies.filter(
       (tech) =>
         tech.name === "Java" ||
         tech.name === "Spring" ||
         tech.name === "SQL" ||
-        tech.name === "PostgreSQL"
+        tech.name === "PostgreSQL" ||
+        tech.name === "GCP",
+    ),
+  },
+  {
+    title: "Junior Software Engineer",
+    company_name: "EPAM Systems",
+    icon: "/epam.png",
+    date: "June 2025 - Present",
+    techRelated: technologies.filter(
+      (tech) =>
+        tech.name === "C#" || tech.name === ".NET" || tech.name === "AWS",
     ),
   },
 ];
