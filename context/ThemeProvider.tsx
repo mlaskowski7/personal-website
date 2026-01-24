@@ -10,26 +10,34 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setMode] = useState("");
+  const getPreferredMode = () => {
+    if (typeof window === "undefined") return "light";
 
-  const handleThemeChange = () => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setMode("dark");
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setMode("light");
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+      return "dark";
     }
+
+    return "light";
   };
 
+  const [mode, setMode] = useState<string>(getPreferredMode);
+
   useEffect(() => {
-    handleThemeChange();
+    if (typeof document === "undefined") return;
+
+    const root = document.documentElement;
+    if (mode === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+
+    localStorage.setItem("theme", mode);
   }, [mode]);
 
   return (

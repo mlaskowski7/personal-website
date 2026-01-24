@@ -70,7 +70,7 @@ const ProjectCard = ({ img, link, title, tech, index }: Props) => {
         width: size.width,
         height: size.height,
       }}
-      className="relative transition-all duration-300 ease hover:scale-110 mx-auto max-sm:w-[30px]"
+      className="relative overflow-hidden transition-all duration-300 ease hover:scale-110 mx-auto max-sm:w-[30px]"
     >
       {isLoading && <div>Loading ...</div>}
       <Image
@@ -84,13 +84,13 @@ const ProjectCard = ({ img, link, title, tech, index }: Props) => {
           isLoading ? "display-none" : "display-block"
         }`}
       />
-      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-full max-sm:w-[80vw] h-full gap-2">
+      <div className="absolute inset-0 bg-gray-950/40 opacity-0 hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300 ease w-full max-sm:w-[80vw] h-full gap-2 px-3">
         <h1 className="text-white font-bold text-xl text-center">{title}</h1>
 
-        <div className="flex gap-1 justify-center items-center">
+        <div className="flex flex-wrap gap-1 sm:gap-2 justify-center items-center max-w-full">
           {tech.map((item, index) => (
             <div
-              className={` font-spaceGrotesk text-[12px] px-1 rounded-md  ${
+              className={` font-spaceGrotesk text-[11px] sm:text-[12px] px-2 py-1 rounded-md leading-tight ${
                 index % 2 == 0
                   ? "bg-secondary dark:bg-dark-secondary"
                   : "bg-tertiary dark:bg-dark-tertiary"

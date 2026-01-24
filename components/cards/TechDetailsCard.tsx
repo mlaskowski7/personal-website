@@ -29,40 +29,46 @@ const isElementExperience = (
 const Element = ({ title, elements, onScrollLink }: ElementProps) => (
   <div className="flex flex-col gap-1 justify-center items-center">
     <h1 className="text-tertiary dark:text-dark-tertiary font-bold">{title}</h1>
-    <div className="flex gap-1">
-      {elements.map((element: Experience | Project, index: number) => {
-        if (isElementExperience(element)) {
-          return (
-            <ScrollLink
-              key={index}
-              to="experience"
-              className={`font-spaceGrotesk text-[12px] px-1 rounded-md underline-offset-1 ease-in-out duration-300 hover:underline cursor-pointer ${
-                index % 2 === 0
-                  ? "bg-primary dark:bg-dark-primary"
-                  : "bg-tertiary dark:bg-dark-tertiary"
-              }`}
-              onClick={onScrollLink}
-            >
-              {element.title} at {element.company_name}
-            </ScrollLink>
-          );
-        } else {
-          return (
-            <Link
-              key={index}
-              href={element.repoLink}
-              className={`font-spaceGrotesk text-[12px] px-1 rounded-md underline-offset-1 ease-in-out duration-300 hover:underline ${
-                index % 2 === 0
-                  ? "bg-primary dark:bg-dark-primary"
-                  : "bg-tertiary dark:bg-dark-tertiary"
-              }`}
-            >
-              {element.title}
-            </Link>
-          );
-        }
-      })}
-    </div>
+    {elements.length === 0 ? (
+      <p className="text-xs text-center text-gray-500 dark:text-gray-300 font-spaceGrotesk">
+        No related items found.
+      </p>
+    ) : (
+      <div className="flex flex-wrap gap-1 justify-center items-center">
+        {elements.map((element: Experience | Project, index: number) => {
+          if (isElementExperience(element)) {
+            return (
+              <ScrollLink
+                key={index}
+                to="experience"
+                className={`font-spaceGrotesk text-[12px] px-1 rounded-md underline-offset-1 ease-in-out duration-300 hover:underline cursor-pointer ${
+                  index % 2 === 0
+                    ? "bg-primary dark:bg-dark-primary"
+                    : "bg-tertiary dark:bg-dark-tertiary"
+                }`}
+                onClick={onScrollLink}
+              >
+                {element.title} at {element.company_name}
+              </ScrollLink>
+            );
+          } else {
+            return (
+              <Link
+                key={index}
+                href={element.repoLink}
+                className={`font-spaceGrotesk text-[12px] px-1 rounded-md underline-offset-1 ease-in-out duration-300 hover:underline ${
+                  index % 2 === 0
+                    ? "bg-primary dark:bg-dark-primary"
+                    : "bg-tertiary dark:bg-dark-tertiary"
+                }`}
+              >
+                {element.title}
+              </Link>
+            );
+          }
+        })}
+      </div>
+    )}
   </div>
 );
 

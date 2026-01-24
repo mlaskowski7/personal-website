@@ -19,8 +19,7 @@ const Technologies = () => {
           Currently the most used by me technologies for backend are{" "}
           <AppearingText text="C#" delay={1} /> with{" "}
           <AppearingText text=".NET" delay={1.25} /> framework and{" "}
-          <AppearingText text="Rust" delay={1.5} /> with{" "}
-          <AppearingText text="Actix-web" delay={1.75} /> framework
+          <AppearingText text="Go" delay={1.5} />
           <br />
           For client side I use <AppearingText
             text="React"
@@ -44,7 +43,9 @@ const Technologies = () => {
               tech.name != "Bash" &&
               tech.category != "db" &&
               tech.name != "SvelteKit" &&
-              tech.name != "Actix",
+              tech.name != "Actix" &&
+              tech.name != "Rust" &&
+              tech.name != "Spring"
           )
           .map((elem: Tech, index: number) => (
             <TechCard key={index} tech={elem} />
