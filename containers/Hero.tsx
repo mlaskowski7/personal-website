@@ -55,22 +55,6 @@ const Hero = () => {
               </Link>
             </motion.div>
           ))}
-        <motion.div
-          animate={{
-            scale: [1, 1.5, 1.5, 1, 1],
-            rotate: [0, 0, 270, 270, 0],
-            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-          }}
-          whileTap={{ scale: 0.85 }}
-        >
-          <a
-            download
-            href="/MateuszLaskowskiResume.pdf"
-            className="bg-secondary dark:bg-dark-secondary hover:text-tertiary dark:hover:text-dark-tertiary ease-in-out duration-300 text-[30px] rounded-full p-3"
-          >
-            <FontAwesomeIcon icon={faFile} />
-          </a>
-        </motion.div>
       </div>
     </div>
   );

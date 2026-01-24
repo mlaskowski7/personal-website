@@ -458,10 +458,4 @@ export const socials: Social[] = [
     username: "mtlaskowski7@gmail.com",
     icon: faEnvelope,
   },
-  {
-    name: "Discord",
-    link: "https://discord.gg/YyaGb22Q",
-    username: "las_novv",
-    icon: faDiscord,
-  },
 ];
