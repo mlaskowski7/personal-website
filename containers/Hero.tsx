@@ -19,7 +19,7 @@ const Hero = () => {
         <p className="max-sm:text-[14px] max-sm:w-[80vw]">
           Hi, my name is Mateusz and I am a{" "}
           <AppearingText
-            text="Junior Software Developer"
+            text="Software Engineer"
             delay={1}
             duration={0.5}
           />{" "}
