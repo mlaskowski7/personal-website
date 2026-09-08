@@ -677,7 +677,7 @@ export const about = {
   location: "Warsaw, Poland",
   // compact, first-person — panels below carry the detail
   summary:
-    "I'm a backend-focused software engineer with 2+ years of experience, currently at EPAM and a startup on the side. I'm Associate-certified in both AWS and Google Cloud, comfortable with Docker and Terraform, and increasingly into AI/ML. I like understanding systems end to end, so I keep one foot in frontend and DevOps too. Outside work I code in Go, tinker with ML, and I played water polo professionally for ~10 years.",
+    "I'm a backend-focused software engineer with 2+ years of experience, currently at EPAM and a startup on the side. I'm Associate-certified in both AWS and Google Cloud, comfortable with Docker and Terraform, and increasingly into AI/ML. I like understanding systems end to end, so I keep one foot in frontend and DevOps too. I try to stay tech-stack agnostic — I enjoy picking up new languages and tools and would rather choose the right one for the job than default to a favorite. Outside work I code in Go, tinker with ML, and I played water polo professionally for ~10 years.",
   spokenLanguages: [
     { name: "Polish", level: "Native" },
     { name: "English", level: "C1 (Cambridge CAE)" },

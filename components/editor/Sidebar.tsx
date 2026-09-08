@@ -74,9 +74,7 @@ const ExplorerView = ({
   activeTabId: string;
   onOpen: (file: ExplorerFile) => void;
 }) => {
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({
-    "projects-folder": true,
-  });
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   const renderNode = (node: ExplorerNode, depth: number): React.ReactNode => {
     if (isFolder(node)) {
