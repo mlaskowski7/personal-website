@@ -134,6 +134,7 @@ const EXTRA_ICONS: Record<string, string> = {
   "OpenAI API": `${I}openai.svg`,
   "OpenAI SDK": `${I}openai.svg`,
   "Notion API": `${I}notion.svg`,
+  LangChain: `${I}langchain.svg`,
   Bash: `${I}gnubash.svg`,
   TensorFlow: `${I}tensorflow.svg`,
   Pandas: `${I}pandas.svg`,
@@ -425,9 +426,9 @@ export const experienceData: Experience[] = [
     sortDate: "2025-06",
     location: "Warsaw, Poland",
     bullets: [
-      "I built backend services in C# / .NET on a cloud-native, event-driven AWS platform.",
+      "I worked on backend services in C# / .NET on a cloud-native, event-driven AWS platform.",
       "I worked daily with DynamoDB, MongoDB, SQS, EventBridge, Lambda, API Gateway, S3, ElastiCache (Redis) and OpenSearch.",
-      "I built an MCP server over our internal API using the official MCP SDK for .NET, exposing internal tooling to LLM agents.",
+      "I worked on an MCP server over our internal API using the official MCP SDK for .NET, exposing internal tooling to LLM agents.",
       "I provisioned infrastructure with Terraform and shipped features TDD-first (xUnit, AutoFixture, Moq).",
       "I ran stakeholder demos and collaborated with QA, BA and DevOps in an Agile team.",
     ],
@@ -456,9 +457,10 @@ export const experienceData: Experience[] = [
     sortDate: "2024-11",
     location: "Warsaw, Poland",
     bullets: [
-      "I joined a Java internship building a microservices-based project.",
+      "I joined a Java internship, working within a team of interns on a microservices architecture project.",
       "I wrote well-tested services with Java 21, Spring Boot, Spring Data JPA, Spring Security and Hibernate.",
       "I set up CI/CD for a microservice with Terraform, GitLab CI, GCP Cloud Run and Cloud SQL.",
+      "I completed a structured learning path covering Java and the Spring ecosystem as part of the internship program.",
     ],
     techRelated: pick(
       "Java",
@@ -485,8 +487,8 @@ export const experienceData: Experience[] = [
     location: "Warsaw, Poland",
     bullets: [
       "I worked across three projects spanning backend, desktop and frontend.",
-      "I built a web app with Java 8, Spring and JSP.",
-      "I developed a facility-management system in C# / .NET with WCF — down to serial communication and debugging ASM.",
+      "I worked on a web app with Java 8, Spring and JSP.",
+      "I worked on a facility-management system in C# / .NET with WCF — down to serial communication and debugging ASM.",
       "I worked on a web client with TypeScript, React, Redux and Sass.",
     ],
     techRelated: pick(
@@ -702,6 +704,7 @@ export const activities: Activity[] = [
     date: "Apr 2025 - Jun 2026",
     sortDate: "2025-04",
     icon: "/icons/mlcollective.jpeg",
+    techUsed: pick("Python", "FastAPI", "LangChain"),
   },
   {
     title: "GS Warsaw Hackathon",
