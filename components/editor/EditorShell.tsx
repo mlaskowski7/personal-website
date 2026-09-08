@@ -23,6 +23,7 @@ import StackPanel from "../panels/StackPanel";
 import ProjectPanel from "../panels/ProjectPanel";
 import ProjectsIndexPanel from "../panels/ProjectsIndexPanel";
 import ContactPanel from "../panels/ContactPanel";
+import ResumePanel from "../panels/ResumePanel";
 import CommitDiffPanel from "../panels/CommitDiffPanel";
 
 const readmeTab = fileToTab(rootFiles.find((f) => f.id === "readme")!);
@@ -157,6 +158,8 @@ const EditorShell = () => {
         return <ProjectPanel slug={activeTab.projectSlug} instant={instant} />;
       case "contact":
         return <ContactPanel instant={instant} />;
+      case "resume":
+        return <ResumePanel instant={instant} />;
       default:
         return null;
     }

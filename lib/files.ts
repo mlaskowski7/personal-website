@@ -5,7 +5,8 @@ export type PanelId =
   | "stack"
   | "projects-index"
   | "project"
-  | "contact";
+  | "contact"
+  | "resume";
 
 export interface ExplorerFile {
   id: string;
@@ -126,12 +127,10 @@ export const rootFiles: ExplorerFile[] = [
   {
     id: "resume",
     name: "resume.pdf",
-    panel: "contact",
+    panel: "resume",
     lang: "PDF",
     ext: "PDF",
     color: "text-ed-red",
-    external: "/MateuszLaskowskiResume.pdf",
-    download: true,
   },
 ];
 
