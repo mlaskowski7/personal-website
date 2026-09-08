@@ -430,7 +430,8 @@ export const experienceData: Experience[] = [
       "I worked daily with DynamoDB, MongoDB, SQS, EventBridge, Lambda, API Gateway, S3, ElastiCache (Redis) and OpenSearch.",
       "I worked on an MCP server over our internal API using the official MCP SDK for .NET, exposing internal tooling to LLM agents.",
       "I provisioned infrastructure with Terraform and shipped features TDD-first (xUnit, AutoFixture, Moq).",
-      "I ran stakeholder demos and collaborated with QA, BA and DevOps in an Agile team.",
+      "I performed regular demo sessions and collaborated with QA, BA and DevOps in an Agile team.",
+      "I worked with Azure DevOps pipelines for CI/CD.",
     ],
     techRelated: pick(
       "C#",
@@ -446,7 +447,8 @@ export const experienceData: Experience[] = [
       "S3",
       "Redis",
       "OpenSearch",
-      "MCP"
+      "MCP",
+      "Azure DevOps"
     ),
   },
   {
