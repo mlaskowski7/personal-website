@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono, Space_Grotesk } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import "../lib/fontawesome";
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-inter",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-spaceGrotesk",
-});
-
-const roboto = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-robotoMono",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "mlaskowski7",
-  description: "Mateusz Laskowski's dev portfolio website",
+  title: "mateusz-laskowski ~ portfolio",
+  description: "Mateusz Laskowski's dev portfolio, rendered as a code editor.",
 };
 
 export default function RootLayout({
@@ -33,13 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/logo.png" />
-      </head>
-      <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${roboto.variable}`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
